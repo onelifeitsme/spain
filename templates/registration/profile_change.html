@@ -1,0 +1,89 @@
+{% extends '_layout.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+
+
+{% block content %}
+
+    <section class="gray p-0">
+        <div class="container-fluid p-0">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="property_dashboard_navbar">
+
+                        <div class="dash_user_menues">
+                            <ul>
+                                <li class="active"><a href="{% url 'profile' %}">
+                                    <i class="ti-user"></i>{% translate "My Profile" %}</a>
+                                </li>
+                                <li><a href="{% url 'favorite_rent_object_list' %}">
+                                    <i class="ti-bookmark"></i>{% translate "My Favorites" %}</a>
+                                </li>
+                                <li><a href="{% url 'history' %}">
+                                    <i class="ti-layers"></i>{% translate "History" %}</a>
+                                </li>
+                                <li><a href="{% url 'password_change' %}">
+                                    <i class="ti-unlock"></i>{% translate "Change Password" %}</a>
+                                </li>
+                                <li><a href="{% url 'logout' %}">
+                                    <i class="ti-power-off"></i>{% translate "Log Out" %}</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-8 col-sm-12">
+                    <div class="dashboard-body">
+
+                        <div class="dashboard-wraper">
+
+                            <!-- Basic Information -->
+                            <div class="frm_submit_block">
+                                <h4>{% translate "My Account"%}</h4>
+                                <div class="frm_submit_wrap">
+
+                                        {% crispy user_change_form %}
+
+    {#                                        <form method="post" class="form-row" enctype="multipart/form-data">#}
+                                        {#                                            {% csrf_token %}#}
+                                        {##}
+                                        {#                                            {% include 'partials/form_errors.html' %}#}
+                                        {##}
+                                        {#                                            {% for field in form %}#}
+                                        {##}
+                                        {#                                                <div class="form-group col-md-6">#}
+                                        {#                                                    <label>{{ field.label }}</label>#}
+                                        {#                                                    {{ field }}#}
+                                        {##}
+                                        {#                                                </div>#}
+                                        {##}
+                                        {#                                            {% endfor %}#}
+                                        {##}
+                                        {#                                            <div class="form-group col-lg-12 col-md-12">#}
+                                        {#                                                <button class="btn btn-theme bg-2" type="submit">Save Changes</button>#}
+                                        {#                                            </div>#}
+                                        {##}
+                                        {#                                        </form>#}
+
+{#                                    </div>#}
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

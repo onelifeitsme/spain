@@ -1,0 +1,19 @@
+{% load i18n %}
+{% load static %}
+
+
+{% if paginator.num_pages > 1 %}
+    <div class="nav-link">
+        {% if page_obj.has_previous %}
+            <a href="?{% get_parameters page %}page={{ page_obj.previous_page_number }}" class="page-numbers"><i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+        {% endif %}
+            <a class="page-numbers current">
+        {% blocktrans with page_num=page_obj.number total_pages=paginator.num_pages %}
+            Page {{ page_num }} of {{ total_pages }}
+        {% endblocktrans %}
+            </a>
+        {% if page_obj.has_next %}
+            <a href="?{% get_parameters page %}page={{ page_obj.next_page_number }}" class="page-numbers"><i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+        {% endif %}
+    </div>
+{% endif %}

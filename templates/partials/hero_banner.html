@@ -1,0 +1,23 @@
+{% load static %}
+{% load webp_converter %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+<div class="image-cover hero_banner" style="background:#334aca url({% static_webp 'assets/img/landing-bg.png' %}) no-repeat;"
+     data-overlay="1">
+
+
+    <div class="container">
+
+
+        <h1 class="big-header-capt mb-0">{% translate "Buy, Sell & Rent Homes" %}</h1>
+        <p class="text-center mb-5">{% translate "Find new & featured property located in your local city." %}</p>
+
+        <!-- Type -->
+        <div class="full_search_box nexio_search lightanic_search hero_search-radius modern">
+            <div class="search_hero_wrapping">
+                {% crispy search_form %}
+            </div>
+        </div>
+    </div>
+</div>

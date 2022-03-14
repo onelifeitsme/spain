@@ -1,0 +1,100 @@
+{% extends '_layout.html' %}
+{% load static %}
+{% load webp_converter %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+
+
+{% block content %}
+
+    <div class="page-title" style="background:#f4f4f4 url({% static_webp 'assets/img/FIGARO_11_AMETTLA_28.jpg' %});" data-overlay="5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+
+                    <div class="breadcrumbs-wrap">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <a href="{% url 'home' %}">{% translate 'Home' %}</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                {% translate 'Contacts' %}
+                            </li>
+                        </ol>
+                        <h2 class="breadcrumb-title">{% translate 'Contacts' %}</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="gray-dark">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8 col-md-7">
+
+                    <div class="property_block_wrap style-2">
+
+                        <div class="property_block_wrap_header no-collapse">
+                            {% if messages %}
+                                <ul class="messages">
+                                    {% for message in messages %}
+                                        <li{% if message.tags == 'success' %}
+                                            class="alert alert-success"{% endif %}>{{ message }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+                        <div class="block-body">
+                            <h4 class="property_block_title">Fillup The Form</h4>
+
+                            {% crispy feedback_form %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-5">
+
+                    {% if head_office %}
+
+                        <div class="contact-box">
+                            <i class="{{ head_office.icon_class }}"></i>
+                            <h4>Head Office</h4>
+                            <p>{{ head_office.title }}</p>
+                            <p>{{ head_office.subtitle }}</p>
+                            <p>{{ head_office.sub_subtitle }}</p>
+                        </div>
+
+                    {% else %}
+
+                        <div class="contact-box">
+                            <i class="ti-email"></i>
+                            <h4>Contact Us</h4>
+                            <p>{{ head_office.title }}</p>
+                            <p>{{ head_office.subtitle }}</p>
+                            <span>{{ head_office.sub_subtitle }}</span>
+                        </div>
+
+                    {% endif %}
+                </div>
+
+            </div>
+
+
+        </div>
+
+        </div>
+    </section>
+
+
+    <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+
+
+{% endblock %}

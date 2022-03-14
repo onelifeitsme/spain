@@ -1,0 +1,49 @@
+{% load detail_and_futures_filter %}
+{% load i18n %}
+
+
+<div class="property_block_wrap style-2 review_jump">
+
+    <div class="property_block_wrap_header">
+        <a data-toggle="collapse" data-parent="#rev" href="#clEight" aria-expanded="true"><h4
+                class="property_block_title"><span>{{ reviews_count }}</span> {% translate "Reviews" %}</h4></a>
+    </div>
+
+    <div id="clEight" class="panel-collapse collapse show" aria-expanded="true">
+        <div class="block-body">
+            <div class="author-review">
+                <div class="comment-list">
+                    <ul>
+                        {% for review in reviews %}
+                            <li class="article_comments_wrap">
+                                <article>
+                                    <div class="article_comments_thumb">
+                                        {% if review.user.avatar %}
+                                                <img src="{{ review.user.avatar.url }}" alt="{{ review.user.full_name }}">
+                                            {% else %}
+                                                <img src="https://via.placeholder.com/500x500" alt="{{ review.user.full_name }}">
+                                            {% endif %}
+                                    </div>
+                                    <div class="comment-details">
+                                        <div class="comment-meta">
+                                            <div class="comment-left-meta">
+                                                <h4 class="author-name">{{ review.user.full_name }}</h4>
+                                                <div class="comment-date">{{ review.create_date.date | date_format }}</div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-text">
+                                            <p>{{ review.text }}</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="reviews-checked theme-cl"><i
+                    class="fas fa-arrow-alt-circle-down mr-2"></i>{% translate "See More Reviews" %}</a>
+        </div>
+    </div>
+
+</div>

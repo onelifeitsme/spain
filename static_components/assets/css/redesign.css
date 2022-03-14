@@ -1,0 +1,111 @@
+.pagination {
+    display: table;
+    padding-left: 0;
+    border-radius: 4px;
+    margin: 20px auto 0 !important;
+}
+
+.pagination > li > a,
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 0;
+    margin: 5px;
+    color: #5a6f7c;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #eaeff5;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover,
+.pagination > li > a:focus,
+.pagination > li > a:hover {
+    z-index: 2;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #4760ff !important;
+    border-color: #4760ff !important;
+}
+
+.pagination li:first-child a {
+    background: #140c40 !important;
+    border: 1px solid #140c40 !important;
+    border-radius: 50% !important;
+    color: #fff
+}
+
+.pagination li:last-child a {
+    background: #140c40;
+    border: 1px solid #140c40;
+    border-radius: 50% !important;
+    color: #fff;
+}
+
+.pagination > li {
+    display: inline;
+}
+
+.previous-page-link:hover{
+    z-index: 2;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #4760ff !important;
+    border-color: #4760ff !important;
+    border-radius: 50% !important;
+
+}
+
+.lightanic_search.hero_search-radius.modern .input-with-icon .form-control.languageselect {
+    height: 42px;
+}
+
+.lightanic_search.hero_search-radius.modern .input-with-icon .form-control.languageselect option {
+    font-size: 18px;
+}
+
+ul {
+    list-style: circle outside;
+}
+
+.nav-menu-social.align-to-right.dhsbrd {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  column-gap: 12px; align-items: center;
+}
+
+.nav-menu-social .icon--wrapper {
+  align-self: center;
+}
+
+.nav-menu-social .insta--wrapper {
+  align-self: center;
+  margin-top: -3px;
+}
+
+.nav-menu-social .insta--wrapper a {
+  padding: 0;
+  font-size: 15.5px;
+}
+
+.nav-menu-social .blue-btn--wrapper {
+  margin-top: -3px;
+}
+
+.nav-menu-social .blue-btn--wrapper a {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav-menu-social .add-listing {
+  align-self: baseline;
+}

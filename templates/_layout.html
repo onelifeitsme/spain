@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block layout %}
+    <div id="main-wrapper">
+
+        {% include 'partials/header.html' %}
+
+        {% block content_wrapper %}
+            {% block breadcrumbs %}{% endblock %}
+            {% block content %}{% endblock %}
+        {% endblock %}
+
+        <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+
+        {% include 'partials/footer.html' %}
+        {% include 'partials/modal_login.html' %}
+        {% include 'partials/modal_sign.html' %}
+
+    </div>
+{% endblock %}

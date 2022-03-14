@@ -1,0 +1,65 @@
+{% load static %}
+{% load detail_and_futures_filter %}
+
+{% for object in object_list %}
+    <!-- Single Property -->
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="list-slide-box">
+            <div class="modern-list">
+                <div class="grid-category-thumb">
+                    <a href="{% url 'object_detail' object.pk %}" class="overlay-cate">
+                        {% if not object.primary_image %}
+                            <img src="https://via.placeholder.com/1200x800" class="img-responsive"
+                                 alt="">
+                        {% else %}
+                            <img src="{{ object.primary_image.url }}"
+                                 class="img-responsive" alt="">
+                        {% endif %}
+                    </a>
+                    <div class="property_meta simple">
+                        {% if object.type_of_deal == 'SALE' %}
+                            <a href="#" class="cate-trix theme-cl">For Sale</a>
+                        {% else %}
+                            <a href="#" class="cate-trix theme-cl">For Rent</a>
+                        {% endif %}
+
+                    </div>
+                </div>
+                <div class="modern-list-content">
+                    {#                                        <div class="author-avater">#}
+                    {#                                            <img src="https://via.placeholder.com/500x500" class="author-avater-img"#}
+                    {#                                                 alt="">#}
+                    {#                                        </div>#}
+                    <div class="listing-content-wrap smalls">
+                        <h4 class="lst-title"><a href="{% url 'object_detail' object.pk %}">{{ object.name }}</a>
+                        </h4>
+                        <p>{{ object.country }}, {{ object.city }}</p>
+                    </div>
+                    <div class="listing-footer-wrap property-lists mt-2">
+                        <div class="property-lists flex-1">
+                            <ul>
+                                {% with bed=object.detailandfeature_set.all|get_daf:'Bedrooms' %}
+                                    {% if bed %}
+                                        <li><span class="flatcons"><img
+                                                src="{% static 'assets/img/color-bed.svg' %}"
+                                                alt=""></span>{{ bed.property }}
+                                        </li>
+                                    {% endif %}
+                                {% endwith %}
+                                {% with bath=object.detailandfeature_set.all|get_daf:'Bathrooms' %}
+                                    {% if bath %}
+                                        <li><span class="flatcons"><img
+                                                src="{% static 'assets/img/color-bathroom.svg' %}"
+                                                alt=""></span>{{ bath.property }}
+                                        </li>
+                                    {% endif %}
+                                {% endwith %}
+                            </ul>
+                        </div>
+                        <h4 class="mdr-price">{{ object.currency.symbol }} {{ object.price }}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

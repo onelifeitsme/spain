@@ -1,0 +1,228 @@
+{% extends '_layout.html' %}
+{% load static %}
+{% load i18n %}
+{% load detail_and_futures_filter %}
+
+
+{% block content %}
+
+    <section class="gray p-0">
+        <div class="container-fluid p-0">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="property_dashboard_navbar">
+
+                        <div class="dash_user_menues">
+                            <ul>
+                                <li><a href="{% url 'profile' %}"><i class="ti-user"></i>{% translate "My Profile" %}</a>
+                                </li>
+                                <li><a href="{% url 'favorite_rent_object_list' %}"><i
+                                        class="ti-bookmark"></i>{% translate "My Favorites" %}</a></li>
+                                <li class="active"><a href="{% url 'history' %}"><i class="ti-layers"></i>{% translate "History" %}</a>
+                                </li>
+                                <li><a href="{% url 'password_change' %}"><i class="ti-unlock"></i>{% translate "Change Password" %}</a>
+                                </li>
+                                <li><a href="{% url 'logout' %}"><i class="ti-power-off"></i>{% translate "Log Out" %}</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-8 col-sm-12">
+                    <div class="dashboard-body">
+
+
+                        <!-- Bookmark Property -->
+                        <div class="frm_submit_block mb-3">
+                            <h4>{% translate "History" %}</h4>
+                        </div>
+
+                        <div class="row">
+
+                            <!-- Single Property -->
+                            {% for reserve in history_reserves %}
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="dashboard_property_list">
+                                        <div class="dashboard_property_list_thumb">
+                                            <a href="{% url 'object_detail' reserve.rent_object.id %}">
+                                                <img src="{{ reserve.rent_object.primary_image.url }}" class="img-fluid"
+                                                     alt=""/>
+                                            </a>
+                                            <span class="dashboard_pr_status" id="{{ reserve.id }}">
+{#                                                from {{ reserve.checkin|date:"d/m/Y" }}#}
+{#                                                to {{ reserve.checkout|date:"d/m/Y" }}#}
+                                            </span>
+                                        </div>
+                                        <div class="dashboard_property_list_content">
+                                            <a href="{% url 'object_detail' reserve.rent_object.id %}">
+                                                <h4>{{ reserve.rent_object.name }}</h4></a>
+                                            <span>
+                                                <i class="ti-location-pin"></i>
+                                                {{ reserve.rent_object.address }},
+                                            </span>
+                                        </div>
+                                        <div class="dashboard_property_list_footer">
+                                            <a href="javascript:void(0);" class="text-danger add-favorite_history"
+                                               data-toggle="tooltip"
+                                               title="Make Featured" favorite_id="{{ reserve.rent_object.id }}"></a>
+                                            {% with date_expired=reserve|date_expired %}
+                                                {% if date_expired  %}
+                                                    <a href="#" data-toggle="modal" data-target="#exampleModalCentered"><i
+                                                            class="ti-eye"></i></a>
+                                                {% endif %}
+                                            {% endwith %}
+                                            {#                                            <a href="#" data-toggle="tooltip" title="Delete Property"><i#}
+                                            {#                                                    class="ti-close"></i></a>#}
+                                            {#                                            <a href="#" data-toggle="tooltip" title="Pause"><i#}
+                                            {#                                                    class="ti-control-pause"></i></a>#}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog"
+                                     aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalCenteredLabel">Modal title</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h4>Hidden details:</h4>
+                                                <div>{{ object.rent_object.hidden_details }}</div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+
+
+                            <!-- Single Property -->
+{#                            <div class="col-lg-4 col-md-6 col-sm-12">#}
+{#                                <div class="dashboard_property_list">#}
+{#                                    <div class="dashboard_property_list_thumb">#}
+{#                                        <img src="https://via.placeholder.com/1400x720" class="img-fluid" alt=""/>#}
+{#                                        <span class="dashboard_pr_status published">Published</span>#}
+{#                                    </div>#}
+{#                                    <div class="dashboard_property_list_content">#}
+{#                                        <h4>Daisy Rose Villa</h4>#}
+{#                                        <span><i class="ti-location-pin"></i>Montreal, Canada</span>#}
+{#                                    </div>#}
+{#                                    <div class="dashboard_property_list_footer">#}
+{#                                        <a href="#" class="featured" data-toggle="tooltip" title="Featured Property"><i#}
+{#                                                class="ti-star"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Edit Property"><i#}
+{#                                                class="ti-pencil"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="302 Views"><i class="ti-eye"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Delete Property"><i#}
+{#                                                class="ti-close"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Running"><i#}
+{#                                                class="ti-control-play"></i></a>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <!-- Single Property -->#}
+{#                            <div class="col-lg-4 col-md-6 col-sm-12">#}
+{#                                <div class="dashboard_property_list">#}
+{#                                    <div class="dashboard_property_list_thumb">#}
+{#                                        <img src="https://via.placeholder.com/1400x720" class="img-fluid" alt=""/>#}
+{#                                        <span class="dashboard_pr_status expire">10 days remain</span>#}
+{#                                    </div>#}
+{#                                    <div class="dashboard_property_list_content">#}
+{#                                        <h4>Sangam Aprtment</h4>#}
+{#                                        <span><i class="ti-location-pin"></i>California, USA</span>#}
+{#                                    </div>#}
+{#                                    <div class="dashboard_property_list_footer">#}
+{#                                        <a href="#" class="text-featured" data-toggle="tooltip" title="Make Featured"><i#}
+{#                                                class="ti-star"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Edit Property"><i#}
+{#                                                class="ti-pencil"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="302 Views"><i class="ti-eye"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Delete Property"><i#}
+{#                                                class="ti-close"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Pause"><i class="ti-control-pause"></i></a>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <!-- Single Property -->#}
+{#                            <div class="col-lg-4 col-md-6 col-sm-12">#}
+{#                                <div class="dashboard_property_list">#}
+{#                                    <div class="dashboard_property_list_thumb">#}
+{#                                        <img src="https://via.placeholder.com/1400x720" class="img-fluid" alt=""/>#}
+{#                                        <span class="dashboard_pr_status">Paused</span>#}
+{#                                    </div>#}
+{#                                    <div class="dashboard_property_list_content">#}
+{#                                        <h4>Silver City</h4>#}
+{#                                        <span><i class="ti-location-pin"></i>Liverpool, London</span>#}
+{#                                    </div>#}
+{#                                    <div class="dashboard_property_list_footer">#}
+{#                                        <a href="#" class="upgrade" data-toggle="tooltip" title="Upgrade"><i#}
+{#                                                class="ti-star"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Edit Property"><i#}
+{#                                                class="ti-pencil"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="302 Views"><i class="ti-eye"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Delete Property"><i#}
+{#                                                class="ti-close"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Running"><i#}
+{#                                                class="ti-control-play"></i></a>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <!-- Single Property -->#}
+{#                            <div class="col-lg-4 col-md-6 col-sm-12">#}
+{#                                <div class="dashboard_property_list">#}
+{#                                    <div class="dashboard_property_list_thumb">#}
+{#                                        <img src="https://via.placeholder.com/1400x720" class="img-fluid" alt=""/>#}
+{#                                        <span class="dashboard_pr_status published">Published</span>#}
+{#                                    </div>#}
+{#                                    <div class="dashboard_property_list_content">#}
+{#                                        <h4>Haro Om House</h4>#}
+{#                                        <span><i class="ti-location-pin"></i>Housten, USA</span>#}
+{#                                    </div>#}
+{#                                    <div class="dashboard_property_list_footer">#}
+{#                                        <a href="#" class="text-featured" data-toggle="tooltip" title="Make Featured"><i#}
+{#                                                class="ti-star"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Edit Property"><i#}
+{#                                                class="ti-pencil"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="302 Views"><i class="ti-eye"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Delete Property"><i#}
+{#                                                class="ti-close"></i></a>#}
+{#                                        <a href="#" data-toggle="tooltip" title="Pause"><i class="ti-control-pause"></i></a>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+
+                        </div>
+                        {#                        <!-- row -->#}
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+
+
+
+

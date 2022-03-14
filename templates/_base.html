@@ -1,0 +1,211 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="yandex-verification" content="4e43fd037568639f"/>
+    <meta name="keywords" content="{% block meta_keywords %}{{ seo.keywords }} {% endblock %}">
+    <meta content="{% block meta_description %}{{ seo.description }} {% endblock %}" name="description"/>
+    <title>{% block meta_title %}{{ seo.title }} {% endblock %}</title>
+
+    <!-- Put favicon.ico and apple-touch-icon(s).png in the images folder -->
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}">
+
+    <!-- CSS StyleSheets -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
+          type='text/css'>
+
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/redesign.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/colors.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{#    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">#}
+
+    {#    {% block extrastyles %}{% endblock %}#}
+
+</head>
+
+<body class="yellow-skin">
+
+<div class="preloader"></div>
+
+{% autoescape off %}
+    {% block layout %}
+    {% endblock %}
+{% endautoescape %}
+
+
+{% block extrascripts %}
+{% endblock %}
+
+{# Block for body onload functions #}
+{#<script type="text/javascript">#}
+{#    $(function () {#}
+{#        {% block onbodyload %}{% endblock %}#}
+{#    });#}
+{#</script>#}
+
+<!-- general script file -->
+
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+{#<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>#}
+<script src="{% static 'assets/js/ion.rangeSlider.min.js' %}"></script>
+<script src="{% static 'assets/js/select2.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'assets/js/slick.js' %}"></script>
+<script src="{% static 'assets/js/slider-bg.js' %}"></script>
+<script src="{% static 'assets/js/lightbox.js' %}"></script>
+<script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+{#<script src="{% static 'assets/js/daterangepicker.js' %}"></script>#}
+<script src="{% static 'assets/js/custom.js' %}"></script>
+
+<!-- Date Booking Script -->
+<script src="{% static 'assets/js/moment.min.js' %}"></script>
+<script src="{% static 'assets/js/daterangepicker.js' %}"></script>
+
+<!-- Map -->
+{#<script src="https://maps.google.com/maps/api/js?key=AIzaSyCMfWNDie3NnXO3c8MZ0h9HNPChnmb5qwU&libraries=places"></script>#}
+<script src="{% static 'assets/js/map_infobox.js' %}"></script>
+<script src="{% static 'assets/js/markerclusterer.js' %}"></script>
+<script src="{% static 'assets/js/select_city.js' %}"></script>
+
+{#<script src="{% static 'assets/js/map.js' %}"></script>#}
+
+
+<!-- AJAX -->
+<script src="{% static 'assets/js/ajax/get_csrf.js' %}"></script>
+{#<script src="{% static 'assets/js/ajax/ajax_add_to_favorite.js' %}"></script>#}
+
+<script>
+    $(document).ready(function () {
+        let favoriteObjects = document.getElementsByClassName("add-favorite");
+        for (let i = 0; i < favoriteObjects.length; i++) {
+            let obj = favoriteObjects[i];
+            let obj_id = $(obj).attr('favorite_id');
+            if (obj_id) {
+                $.ajax({
+                    url: '/favorite_get/' + obj_id.toString(),
+                    type: 'GET',
+                    success: function (data) {
+                        if (data.in_favorites) {
+                            $(obj).html('<i class="fas fa-heart"></i>');
+                        } else {
+                            $(obj).html('<i class="ti-heart"></i>');
+                        }
+                    },
+                    error: function (data) {
+                        console.log('ajax error')
+                    },
+
+                })
+            }
+        }
+
+        let favoriteHistoryObjects = document.getElementsByClassName("add-favorite_history");
+        for (let i = 0; i < favoriteHistoryObjects.length; i++) {
+            let obj = favoriteHistoryObjects[i];
+            let obj_id = $(obj).attr('favorite_id');
+            $.ajax({
+                url: '/favorite_get/' + obj_id.toString(),
+                type: 'GET',
+                success: function (data) {
+                    if (data.in_favorites) {
+                        $(obj).html('<i class="fas fa-heart"></i>');
+
+                    } else {
+                        $(obj).html('<i class="ti-heart"></i>');
+                    }
+                },
+                error: function (data) {
+                    console.log('ajax error')
+                },
+
+            })
+        }
+
+        let historyObjects = document.getElementsByClassName("dashboard_pr_status");
+        for (let i = 0; i < historyObjects.length; i++) {
+            let obj = historyObjects[i];
+            let id = $(obj).attr('id');
+            $.ajax({
+                url: '/rent_status_get/' + id.toString(),
+                type: 'GET',
+                success: function (data) {
+                    if (data.rent_status) {
+
+                    $(obj).html(data.rent_status);
+                    $(obj).addClass(data.class);
+                    }
+
+                },
+                error: function (data) {
+                    console.log('ajax error')
+                },
+
+            })
+        }
+
+    });
+
+
+    $('.add-favorite').click(function () {
+        let obj = $(this);
+        let obj_id = $(this).attr('favorite_id');
+        $.ajax({
+            url: '/favorite_add/' + obj_id.toString(),
+            type: 'GET',
+            success: function (data) {
+                if (obj.html().includes('<i class="ti-heart"></i>')) {
+                    obj.html('<i class="fas fa-heart"></i>')
+                } else {
+                    obj.html('<i class="ti-heart"></i>')
+                }
+                ;
+            },
+            error: function (data) {
+                console.log('ajax error')
+            },
+        })
+
+
+    })
+
+    $('.add-favorite_history').click(function () {
+        let obj = $(this);
+        let obj_id = $(this).attr('favorite_id');
+        $.ajax({
+            url: '/favorite_add/' + obj_id.toString(),
+            type: 'GET',
+            success: function (data) {
+                if (obj.html().includes('<i class="ti-heart"></i>')) {
+                    obj.html('<i class="fas fa-heart"></i>')
+                } else {
+                    obj.html('<i class="ti-heart"></i>')
+                }
+                ;
+            },
+            error: function (data) {
+                console.log('ajax error')
+            },
+        })
+
+
+    })
+
+
+</script>
+
+
+</body>
+
+</html>

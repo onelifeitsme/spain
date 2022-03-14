@@ -1,0 +1,5 @@
+{% if widget.wrap_label %}
+    {% include "django/forms/widgets/input_custom.html" %}
+    <label{% if widget.attrs.id %}
+    for="{{ widget.attrs.id }}" class="radio-custom-label" {% endif %}>{% endif %}
+{% if widget.wrap_label %} {{ widget.label }}</label>{% endif %}

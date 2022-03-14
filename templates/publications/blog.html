@@ -1,0 +1,142 @@
+{% extends '_layout.html' %}
+{% load static %}
+{% load webp_converter %}
+{% load i18n %}
+
+
+{% block content %}
+    <div class="page-title" style="background:#f4f4f4 url({% static_webp 'assets/img/inner-banner.jpg' %});"
+         data-overlay="5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+
+                    <div class="breadcrumbs-wrap">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <a href="{% url 'home' %}">
+                                    {% translate "Home" %}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                {% translate "Blog" %}
+                            </li>
+                        </ol>
+                        <h2 class="breadcrumb-title">
+                            {% translate "Latest & New Articles" %}
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="gray">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="sec-heading center">
+                        <h2>{% translate "Latest Blogs" %}</h2>
+                        <p>{% translate "We post regulary most powerful articles for help and support." %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- Single blog Grid -->
+                {% for blog in blog_list %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="grid_blog_box">
+
+                            <div class="gtid_blog_thumb">
+                                {% if blog.image %}
+                                    <a href="{{ blog.id }}/">
+                                        <img src="{{ blog.image.url }}" class="img-fluid" alt="">
+                                    </a>
+                                {% else %}
+                                    <a href="{{ blog.id }}/">
+                                        <img src="https://via.placeholder.com/1200x800" class="img-responsive">
+                                    </a>
+                                {% endif %}
+                            </div>
+
+                            <div class="blog-body">
+                                <div class="artices_blog_ctas">
+                                    <span class="post-date">{{ blog.date_created }}</span>
+                                </div>
+                                <h4 class="bl-title"><a href="{{ blog.id }}">{{ blog.short_description }}</a></h4>
+                            </div>
+
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="pagination p-center">
+                        {% if  page_obj.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}"
+                                   aria-label="Previous">
+                                    <div class="previous-page-link">
+                                    <span class="ti-arrow-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                        </div>
+                                </a>
+                            </li>
+                        {% endif %}
+
+                        {% if  page_obj.number > 2 %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page=1">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link">...</a>
+                            </li>
+                        {% endif %}
+
+                        {% for page_num in  page_obj.paginator.page_range %}
+                            {% if page_obj.number == page_num %}
+                                <li class="page-item active">
+                                    <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
+                                </li>
+                            {% elif page_num > page_obj.number|add:-2 and page_num < page_obj.number|add:2 %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if  page_obj.number < page_obj.paginator.num_pages|add:-1 %}
+                            <li class="page-item">
+                                <a class="page-link">...</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link"
+                                   href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                            </li>
+                        {% endif %}
+
+                        {% if  page_obj.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                                    <span class="ti-arrow-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

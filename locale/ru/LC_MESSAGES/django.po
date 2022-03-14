@@ -1,0 +1,1839 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-25 12:54+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: applications/accounts/models.py:33
+msgid "Superuser must have is_staff=True."
+msgstr ""
+
+#: applications/accounts/models.py:35
+msgid "Superuser must have is_superuser=True."
+msgstr ""
+
+#: applications/accounts/models.py:41
+msgid "Phone"
+msgstr "Телефон"
+
+#: applications/accounts/models.py:42
+msgid "Full name"
+msgstr "Полное имя"
+
+#: applications/accounts/models.py:45 applications/search/forms.py:65
+#: applications/search/forms.py:111
+msgid "City"
+msgstr "Город"
+
+#: applications/accounts/models.py:46
+msgid "Registration date"
+msgstr "Дата регистрации"
+
+#: applications/accounts/views.py:83
+#, python-brace-format
+msgid ""
+"User create successfully.\n"
+" A link to complete registration has been sent to {new_user.email}."
+msgstr ""
+
+#: applications/objects/admin.py:38
+msgid "This will be a preview when you select a file"
+msgstr ""
+
+#: applications/objects/forms.py:81 applications/objects/models.py:223
+msgid "Check In"
+msgstr "Дата Въезда"
+
+#: applications/objects/forms.py:88 applications/objects/models.py:224
+msgid "Check Out"
+msgstr "Дата Выезда"
+
+#: applications/objects/forms.py:122
+msgid "Book It Now"
+msgstr "Забронировать сейчас"
+
+#: applications/objects/forms.py:142 applications/objects/forms.py:146
+#: applications/objects/forms.py:150 applications/objects/forms.py:161
+#: applications/objects/forms.py:171 applications/search/forms.py:52
+#: applications/search/forms.py:56 templates/objects/object_list.html:35
+msgid "All"
+msgstr "Все"
+
+#: applications/objects/forms.py:162
+msgid "Less Then €1,000"
+msgstr "Менее €1,000"
+
+#: applications/objects/forms.py:271
+msgid "Show"
+msgstr "Показать"
+
+#: applications/objects/models.py:70 templates/partials/footer.html:33
+#: templates/partials/header.html:76
+msgid "Rent"
+msgstr "Аренда"
+
+#: applications/objects/models.py:71
+#, fuzzy
+#| msgid "For Sale"
+msgid "Sale"
+msgstr "Продажа"
+
+#: applications/objects/models.py:225
+msgid "Adults"
+msgstr "Взрослые"
+
+#: applications/objects/models.py:226
+msgid "Kids"
+msgstr "Дети"
+
+#: applications/objects/models.py:227
+msgid "Total"
+msgstr "Итого"
+
+#: applications/objects/models.py:230
+msgid "With pets"
+msgstr "С питомцами"
+
+#: applications/search/forms.py:50 applications/search/forms.py:83
+msgid "Type"
+msgstr ""
+
+#: applications/search/forms.py:55
+msgid "For"
+msgstr ""
+
+#: applications/search/forms.py:58 applications/search/forms.py:97
+msgid "Price to"
+msgstr "Цена до"
+
+#: applications/search/forms.py:61
+msgid "Country"
+msgstr "Страна"
+
+#: applications/search/forms.py:117
+#: spain_venv/lib/python3.8/site-packages/haystack/forms.py:24
+msgid "Search"
+msgstr "Поиск"
+
+#: applications/search/search_handlers.py:82
+#: applications/search/search_handlers.py:131
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr ""
+
+#: spain/settings.py:182
+msgid "English"
+msgstr ""
+
+#: spain/settings.py:184
+msgid "Russian"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/crispy_forms/tests/test_form_helper.py:148
+#: spain_venv/lib/python3.8/site-packages/crispy_forms/tests/test_form_helper.py:158
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:54
+msgid "This field is required."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/crispy_forms/tests/test_layout.py:394
+msgid "i18n text"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/crispy_forms/tests/test_layout.py:396
+msgid "i18n legend"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/crispy_forms/tests/test_layout_objects.py:127
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:22
+msgid "Enter a valid value."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/contrib/messages/apps.py:7
+msgid "Messages"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/contrib/sitemaps/apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/contrib/staticfiles/apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: spain_venv/lib/python3.8/site-packages/django/core/paginator.py:30
+msgid "…"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/paginator.py:51
+msgid "That page number is not an integer"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/paginator.py:53
+msgid "That page number is less than 1"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/paginator.py:58
+msgid "That page contains no results"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:93
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:675
+msgid "Enter a valid URL."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:150
+msgid "Enter a valid integer."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:161
+msgid "Enter a valid email address."
+msgstr ""
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:262
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:269
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:278
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:288
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:311
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:296
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:312
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:306
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:310
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:340
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:346
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:379
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:388
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:398
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:413
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:432
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:292
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:327
+msgid "Enter a number."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:434
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:439
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:444
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:506
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/core/validators.py:559
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/base.py:1197
+#: spain_venv/lib/python3.8/site-packages/django/forms/models.py:768
+msgid "and"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/base.py:1199
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:100
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:101
+msgid "This field cannot be null."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:102
+msgid "This field cannot be blank."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:103
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:107
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:126
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:958
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:959
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:961
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1002
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1096
+msgid "Comma-separated integers"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1145
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1147
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1290
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1150
+msgid "Date (without time)"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1288
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1292
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1296
+msgid "Date (with time)"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1444
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1446
+msgid "Decimal number"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1585
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1588
+msgid "Duration"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1638
+msgid "Email address"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1661
+msgid "File path"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1727
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1729
+msgid "Floating point number"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1767
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1769
+msgid "Integer"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1852
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1867
+msgid "Small integer"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1875
+msgid "IPv4 address"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1906
+msgid "IP address"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1986
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1987
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1989
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2043
+msgid "Positive big integer"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2056
+msgid "Positive integer"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2069
+msgid "Positive small integer"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2083
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2115
+msgid "Text"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2181
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2183
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2186
+#: spain_venv/lib/python3.8/site-packages/haystack/templates/panels/haystack.html:8
+msgid "Time"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2312
+msgid "URL"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2334
+msgid "Raw binary data"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2399
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py:2401
+msgid "Universally unique identifier"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/files.py:226
+msgid "File"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/files.py:375
+msgid "Image"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/json.py:18
+msgid "A JSON object"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/json.py:20
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/related.py:790
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/related.py:792
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/related.py:1045
+msgid "One-to-one relationship"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/related.py:1099
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/related.py:1100
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/db/models/fields/related.py:1142
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: spain_venv/lib/python3.8/site-packages/django/forms/boundfield.py:150
+msgid ":?.!"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:247
+msgid "Enter a whole number."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:402
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:1143
+msgid "Enter a valid date."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:426
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:1144
+msgid "Enter a valid time."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:454
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:488
+msgid "Enter a valid duration."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:489
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:549
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:550
+msgid "No file was submitted."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:551
+msgid "The submitted file is empty."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:553
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:556
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:617
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:779
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:869
+#: spain_venv/lib/python3.8/site-packages/django/forms/models.py:1309
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:870
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:985
+#: spain_venv/lib/python3.8/site-packages/django/forms/models.py:1308
+msgid "Enter a list of values."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:986
+msgid "Enter a complete value."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:1202
+msgid "Enter a valid UUID."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/fields.py:1232
+msgid "Enter a valid JSON."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: spain_venv/lib/python3.8/site-packages/django/forms/forms.py:76
+msgid ":"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/forms.py:203
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/formsets.py:370
+#, python-format
+msgid "Please submit at most %d form."
+msgid_plural "Please submit at most %d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/formsets.py:377
+#, python-format
+msgid "Please submit at least %d form."
+msgid_plural "Please submit at least %d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/formsets.py:405
+#: spain_venv/lib/python3.8/site-packages/django/forms/formsets.py:412
+msgid "Order"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/formsets.py:417
+msgid "Delete"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/models.py:763
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/models.py:767
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/models.py:773
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/models.py:782
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/models.py:1109
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/models.py:1193
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/models.py:1311
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/utils.py:172
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/widgets.py:403
+#: templates/objects/object_list.html:200
+msgid "Clear"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/widgets.py:404
+msgid "Currently"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/widgets.py:405
+msgid "Change"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/widgets.py:714
+msgid "Unknown"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/widgets.py:715
+msgid "Yes"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/forms/widgets.py:716
+msgid "No"
+msgstr ""
+
+#. Translators: Please do not add spaces around commas.
+#: spain_venv/lib/python3.8/site-packages/django/template/defaultfilters.py:805
+msgid "yes,no,maybe"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/template/defaultfilters.py:834
+#: spain_venv/lib/python3.8/site-packages/django/template/defaultfilters.py:851
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/template/defaultfilters.py:853
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/template/defaultfilters.py:855
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/template/defaultfilters.py:857
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/template/defaultfilters.py:859
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/template/defaultfilters.py:861
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dateformat.py:66
+msgid "p.m."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dateformat.py:67
+msgid "a.m."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dateformat.py:72
+msgid "PM"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dateformat.py:73
+msgid "AM"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dateformat.py:146
+msgid "midnight"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dateformat.py:148
+msgid "noon"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:6
+msgid "Monday"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:6
+msgid "Tuesday"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:6
+msgid "Wednesday"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:6
+msgid "Thursday"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:6
+msgid "Friday"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:7
+msgid "Saturday"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:7
+msgid "Sunday"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:10
+msgid "Mon"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:10
+msgid "Tue"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:10
+msgid "Wed"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:10
+msgid "Thu"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:10
+msgid "Fri"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:11
+msgid "Sat"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:11
+msgid "Sun"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "January"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "February"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "March"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "April"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "May"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:14
+msgid "June"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:15
+msgid "July"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:15
+msgid "August"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:15
+msgid "September"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:15
+msgid "October"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:15
+msgid "November"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:16
+msgid "December"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "jan"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "feb"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "mar"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "apr"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "may"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:19
+msgid "jun"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "jul"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "aug"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "sep"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "oct"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "nov"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:20
+msgid "dec"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:23
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:24
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:25
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:26
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:27
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:28
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:29
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:30
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:31
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:32
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:33
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:34
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:37
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:38
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:39
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:40
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:41
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:42
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:43
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:44
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:45
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:46
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:47
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/dates.py:48
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/text.py:71
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/text.py:240
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: spain_venv/lib/python3.8/site-packages/django/utils/text.py:259
+#: spain_venv/lib/python3.8/site-packages/django/utils/timesince.py:94
+msgid ", "
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/timesince.py:9
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/utils/timesince.py:14
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/csrf.py:110
+msgid "Forbidden"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/csrf.py:111
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/csrf.py:115
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/csrf.py:120
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/csrf.py:124
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/csrf.py:132
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/csrf.py:137
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/csrf.py:142
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:41
+msgid "No year specified"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:61
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:111
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:208
+msgid "Date out of range"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:90
+msgid "No month specified"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:142
+msgid "No day specified"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:188
+msgid "No week specified"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:338
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:367
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:594
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/dates.py:628
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/detail.py:54
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/list.py:67
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/list.py:72
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/generic/list.py:154
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/static.py:40
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/static.py:42
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/static.py:80
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:7
+#: spain_venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:221
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:207
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:222
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:230
+msgid "Django Documentation"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:231
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:239
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:240
+msgid "Get started with Django"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:248
+msgid "Django Community"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:249
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django_summernote/views.py:72
+msgid "Only POST method is allowed"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django_summernote/views.py:86
+msgid "Attachment module is disabled"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django_summernote/views.py:93
+msgid "Only authenticated users are allowed"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django_summernote/views.py:99
+msgid "No files were requested"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django_summernote/views.py:140
+msgid "File size exceeds the limit allowed and cannot be saved"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/django_summernote/views.py:160
+msgid "Failed to save attachment"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack/admin.py:120
+#, python-format
+msgid "0 of %(count)d selected"
+msgid_plural "of %(count)d selected"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack/admin.py:125
+#, python-format
+msgid "%(total_count)s selected"
+msgid_plural "All %(total_count)s selected"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack/forms.py:102
+msgid "Search In"
+msgstr "Поиск в"
+
+#: spain_venv/lib/python3.8/site-packages/haystack/panels.py:28
+msgid "Haystack"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack/panels.py:52
+msgid "Search Queries"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack/templates/panels/haystack.html:5
+msgid "Query"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack/templates/panels/haystack.html:6
+msgid "Backend Alias"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack/templates/panels/haystack.html:7
+msgid "Timeline"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack/templates/panels/haystack.html:9
+msgid "Kwargs"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack_panel/panel.py:29
+msgid "Haystack Queries"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack_panel/templates/haystack_panel/haystack_panel.html:8
+msgid "Query String"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack_panel/templates/haystack_panel/haystack_panel.html:9
+msgid "Additional Args"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack_panel/templates/haystack_panel/haystack_panel.html:10
+msgid "Additional Kwargs"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/haystack_panel/templates/haystack_panel/haystack_panel.html:11
+msgid "Time (ms)"
+msgstr ""
+
+#: spain_venv/lib/python3.8/site-packages/modeltranslation/widgets.py:26
+msgid "None"
+msgstr ""
+
+#: templates/about_page.html:19 templates/contacts.html:20
+#: templates/partials/footer.html:32 templates/partials/header.html:72
+#: templates/publications/blog.html:19
+msgid "Home"
+msgstr "Главная"
+
+#: templates/about_page.html:22 templates/partials/footer.html:43
+#: templates/partials/header.html:82
+msgid "About"
+msgstr "О нас"
+
+#: templates/about_page.html:25
+msgid "About US"
+msgstr "О нас"
+
+#: templates/accounts/favorite_rent_object_list.html:18
+#: templates/accounts/history.html:19 templates/partials/footer.html:54
+#: templates/partials/header.html:133
+#: templates/registration/password_change_done.html:17
+#: templates/registration/password_change_form.html:19
+#: templates/registration/profile_change.html:21
+msgid "My Profile"
+msgstr "Профиль"
+
+#: templates/accounts/favorite_rent_object_list.html:21
+#: templates/accounts/favorite_rent_object_list.html:39
+#: templates/accounts/history.html:22 templates/partials/footer.html:55
+#: templates/partials/header.html:135
+#: templates/registration/password_change_done.html:18
+#: templates/registration/password_change_form.html:20
+#: templates/registration/profile_change.html:24
+msgid "My Favorites"
+msgstr "Избранное"
+
+#: templates/accounts/favorite_rent_object_list.html:22
+#: templates/accounts/history.html:23 templates/accounts/history.html:40
+#: templates/partials/footer.html:56 templates/partials/header.html:136
+#: templates/registration/password_change_done.html:19
+#: templates/registration/password_change_form.html:21
+#: templates/registration/profile_change.html:27
+#, fuzzy
+#| msgid "My History"
+msgid "History"
+msgstr "История"
+
+#: templates/accounts/favorite_rent_object_list.html:23
+#: templates/accounts/history.html:25 templates/partials/header.html:139
+#: templates/registration/password_change_form.html:22
+#: templates/registration/profile_change.html:30
+msgid "Change Password"
+msgstr "Изменить пароль"
+
+#: templates/accounts/favorite_rent_object_list.html:25
+#: templates/accounts/history.html:27
+#: templates/registration/password_change_done.html:22
+#: templates/registration/password_change_form.html:23
+#: templates/registration/profile_change.html:33
+msgid "Log Out"
+msgstr ""
+
+#: templates/contacts.html:23 templates/contacts.html:26
+#: templates/partials/footer.html:44 templates/partials/header.html:83
+msgid "Contacts"
+msgstr "Контакты"
+
+#: templates/objects/detail/comment_list.html:9
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: templates/objects/detail/comment_list.html:45
+msgid "See More Reviews"
+msgstr "Увидеть больше отзывов"
+
+#: templates/objects/detail/detail.html:35
+msgid "Beds"
+msgstr "Кровати"
+
+#: templates/objects/detail/detail.html:39
+msgid "Baths"
+msgstr "Ванные"
+
+#: templates/objects/detail/detail.html:53
+#: templates/objects/detail/reserv_object.html:8
+#: templates/objects/object_list.html:126
+#: templates/partials/popular_objects.html:60
+#: templates/partials/recent_objects.html:60
+msgid "From"
+msgstr "От"
+
+#: templates/objects/detail/detail.html:79
+msgid "Detail & Features"
+msgstr "Детали и особенности"
+
+#: templates/objects/detail/detail.html:97
+msgid "Description"
+msgstr "Описание"
+
+#: templates/objects/detail/detail.html:113
+msgid "Ameneties"
+msgstr "Удобства"
+
+#: templates/objects/detail/detail.html:162
+msgid "Floor Plan"
+msgstr "Поэтажный план"
+
+#: templates/objects/detail/detail.html:199
+msgid "Location"
+msgstr "Расположение"
+
+#: templates/objects/detail/detail.html:219
+msgid "Gallery"
+msgstr "Галерея"
+
+#: templates/objects/detail/detail.html:251
+msgid "Write a Review"
+msgstr "Написать отзыв"
+
+#: templates/objects/detail/detail.html:291
+#: templates/objects/detail/detail.html:366
+#: templates/objects/detail/detail.html:390
+msgid "Add to favorite"
+msgstr "Добавить в избранное"
+
+#: templates/objects/detail/detail.html:305
+msgid "Download"
+msgstr "Загрузить"
+
+#: templates/objects/detail/detail.html:305
+msgid "PDF File"
+msgstr "PDF Файл"
+
+#: templates/objects/detail/detail.html:327
+msgid "Success"
+msgstr "Успешно"
+
+#: templates/objects/detail/detail.html:333
+msgid "Property booked successfully."
+msgstr "Недвижимость успешно забронирована."
+
+#: templates/objects/detail/detail.html:335
+msgid "Checkin date:"
+msgstr "Дата заезда:"
+
+#: templates/objects/detail/detail.html:339
+msgid "Checkout date:"
+msgstr "Дата выезда:"
+
+#: templates/objects/detail/detail.html:364
+#: templates/objects/detail/detail.html:393
+msgid "Remove from favorite"
+msgstr "Убрать из избранного"
+
+#: templates/objects/object_list.html:61
+msgid "Filters"
+msgstr "Фильтры"
+
+#: templates/objects/object_list.html:88
+msgid "For Sale"
+msgstr "Продажа"
+
+#: templates/objects/object_list.html:90
+#, fuzzy
+#| msgid "Rent"
+msgid "For Rent"
+msgstr "Аренда"
+
+#: templates/objects/object_list.html:198
+#, fuzzy
+#| msgid "Filters"
+msgid "Filter"
+msgstr "Фильтры"
+
+#: templates/objects/object_list.html:210
+msgid "Search by name…"
+msgstr "Поиск по имени"
+
+#: templates/partials/footer.html:30
+msgid "My Homes"
+msgstr "Недвижимость"
+
+#: templates/partials/footer.html:34 templates/partials/header.html:77
+msgid "Sell"
+msgstr "Продажа"
+
+#: templates/partials/footer.html:41
+msgid "About Us"
+msgstr "О нас"
+
+#: templates/partials/footer.html:45 templates/partials/header.html:81
+#: templates/publications/blog.html:23
+msgid "Blog"
+msgstr "Блог"
+
+#: templates/partials/footer.html:52
+msgid "Account"
+msgstr "Личные данные"
+
+#: templates/partials/footer.html:63
+msgid "Help"
+msgstr "Помощь"
+
+#: templates/partials/footer.html:65
+msgid "Conditions"
+msgstr "Условия использования"
+
+#: templates/partials/footer.html:66
+msgid "Privacy"
+msgstr "Конфиденциальность"
+
+#: templates/partials/header.html:74
+msgid "Objects"
+msgstr "Объекты"
+
+#: templates/partials/header.html:129
+msgid "Hi"
+msgstr "Привет"
+
+#: templates/partials/header.html:148
+msgid "Logout"
+msgstr "Выход"
+
+#: templates/partials/header.html:158
+msgid "Login"
+msgstr "Вход"
+
+#: templates/partials/header.html:166
+msgid "Sign Up"
+msgstr "Регистрация"
+
+#: templates/partials/hero_banner.html:13
+msgid "Buy, Sell & Rent Homes"
+msgstr "Покупка, Продажа & Аренда Домов"
+
+#: templates/partials/hero_banner.html:14
+msgid "Find new & featured property located in your local city."
+msgstr "Найдите новую и популярную недвижимость в вашем городе."
+
+#: templates/partials/modal_login.html:11
+msgid "Log In"
+msgstr ""
+
+#: templates/partials/modal_login.html:28
+msgid "Save Password"
+msgstr "Сохранить пароль"
+
+#: templates/partials/modal_login.html:33
+msgid "Forget Password?"
+msgstr "Забыли пароль?"
+
+#: templates/partials/modal_login.html:40
+msgid "Haven't Any Account?"
+msgstr "Нет аккаунта?"
+
+#: templates/partials/modal_login.html:41
+msgid "Click here"
+msgstr "Нажмите сюда"
+
+#: templates/partials/pagination.html:11
+#, python-format
+msgid ""
+"\n"
+"            Page %(page_num)s of %(total_pages)s\n"
+"        "
+msgstr ""
+
+#: templates/partials/popular_objects.html:13
+msgid ""
+"\n"
+"                            <h2>Popular Objects</h2>\n"
+"                        "
+msgstr ""
+
+#: templates/partials/recent_objects.html:13
+#, fuzzy
+#| msgid "Objects"
+msgid "Recent Objects"
+msgstr "Недавно Просмотренные"
+
+#: templates/publications/blog.html:27
+msgid "Latest & New Articles"
+msgstr "Последние & Новые Статьи"
+
+#: templates/publications/blog.html:41
+msgid "Latest Blogs"
+msgstr "Последние Блоги"
+
+#: templates/publications/blog.html:42
+msgid "We post regulary most powerful articles for help and support."
+msgstr "Мы регулярно публикуем самые важные статьи для помощи и поддержки."
+
+#: templates/registration/password_change_form.html:36
+#, fuzzy
+#| msgid "Change Password"
+msgid "Change Your Password"
+msgstr "Изменить пароль"
+
+#: templates/registration/password_reset_email.html:3
+#: templates/registration/password_reset_email.txt:2
+#, python-format
+msgid ""
+"\n"
+"Hello,\n"
+"\n"
+"Reset your password on %(domain)s for %(user)s:\n"
+msgstr ""
+
+#: templates/registration/profile_change.html:48
+#, fuzzy
+#| msgid "Account"
+msgid "My Account"
+msgstr "Личные данные"
+
+#: templates/search/partials/pagination.html:8
+msgid "previous"
+msgstr ""
+
+#: templates/search/partials/pagination.html:11
+#, python-format
+msgid ""
+"\n"
+"                Page %(page_num)s of %(total_pages)s\n"
+"            "
+msgstr ""
+
+#: templates/search/partials/pagination.html:16
+msgid "next"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Check Out"
+#~ msgid "Check OutQ"
+#~ msgstr "Дата Выезда"
+
+#~ msgid "bedrooms"
+#~ msgstr "спальни"
+
+#~ msgid "property types"
+#~ msgstr "тип недвижимости"
+
+#~ msgid "Where"
+#~ msgstr "где"
+
+#~ msgid "price range"
+#~ msgstr "цена"
+
+#~ msgid "amenities"
+#~ msgstr "удобства"
+
+#~ msgid "Bedroom"
+#~ msgstr "спальня"
+
+#~ msgid "Make your choice"
+#~ msgstr "Сделайте выбор"
+
+#~ msgid "Property Types"
+#~ msgstr "Тип Недвижимости"
+
+#~ msgid "Looking For"
+#~ msgstr "Цель поиска"
+
+#~ msgid ""
+#~ "\n"
+#~ "                            <h2>Popular Objects</h2>\n"
+#~ "                            <p>Lorem ipsum dolor sit amet, consectetur "
+#~ "adipiscing elit, sed do eiusmod tempor\n"
+#~ "                                incididunt ut labore et dolore magna "
+#~ "aliqua. Ut enim ad minim veniam.</p>\n"
+#~ "                        "
+#~ msgstr ""
+#~ "<h2>Популярные объекты</h2><p>Современные технологии достигли такого "
+#~ "уровня, что курс на социально-ориентированныйпроект, в своём классическом "
+#~ "представлении, допускает внедрение стандартных подходов. Безусловно, "
+#~ "выбранный нами инновационный путь способствует повышению качества форм "
+#~ "воздействия.</p>"
+
+#~ msgid "category"
+#~ msgstr "Тип Недвижимости"
+
+#, fuzzy
+#~| msgid "Price to"
+#~ msgid "price_to"
+#~ msgstr "Цена до"
+
+#~ msgid "city"
+#~ msgstr "Город"
+
+#~ msgid "User Name or Email"
+#~ msgstr "Имя пользователя или Email"
+
+#~ msgid "Password"
+#~ msgstr "Пароль"
+
+#~ msgid "Language"
+#~ msgstr "Язык"

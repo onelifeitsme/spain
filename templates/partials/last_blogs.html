@@ -1,0 +1,55 @@
+{% load static %}
+{% load i18n %}
+{% load webp_converter %}
+
+
+{#{% if popular_objects %}#}
+    <section>
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8">
+                    <div class="sec-heading center">
+                        <h2>{% translate 'Latest News & Articles' %}</h2>
+                    </div>
+                </div>
+            </div>
+                        <div class="row">
+
+            {% for blog in last_blogs %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="grid_blog_box">
+
+                        <div class="gtid_blog_thumb">
+                            {% if blog.image %}
+                                <a href="{% url 'blog' blog.id%}">
+                                    <img src="{{ blog.image.url }}" class="img-fluid" alt="">
+                                </a>
+                            {% else %}
+                                <a href="{% url 'blog' blog.id%}">
+                                    <img src="https://via.placeholder.com/1200x800" class="img-responsive">
+                                </a>
+                            {% endif %}
+                        </div>
+
+                        <div class="blog-body">
+                            <div class="artices_blog_ctas">
+                                <span class="post-date">{{ blog.date_created }}</span>
+                            </div>
+                            <h4 class="bl-title"><a href="{% url 'blog' blog.id%}">{{ blog.short_description }}</a></h4>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+                                        </div>
+
+
+
+
+        </div>
+    </section>
+    <div class="clearfix"></div>
+{#{% endif %}#}
+
+

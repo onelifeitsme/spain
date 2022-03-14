@@ -1,0 +1,133 @@
+{% load static %}
+{% load webp_converter %}
+{% load i18n %}
+
+{% get_current_language as CURRENT_LANGUAGE %}
+{% get_available_languages as AVAILABLE_LANGUAGES %}
+{% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+
+<div class="header header-light">
+    <div class="container">
+        <nav id="navigation" class="navigation navigation-landscape">
+            <div class="nav-header">
+                <a class="nav-brand" href="{% url 'home' %}">
+                    <img src={% static_webp 'assets/img/2fwdhome2staylogoblack.png' %} class="logo" alt="Logo"
+                         style="max-height: 43px;"/>
+                </a>
+                <div class="nav-toggle-social align-to-right">
+                    <ul class="nav-menu nav-menu-social align-right container-md">
+                        <li><a href="https://www.instagram.com/h2srealestate/"><i class="ti-instagram"></i></a></li>
+
+                    </ul>
+                </div>
+                <div class="nav-toggle"></div>
+            </div>
+            <div class="nav-menus-wrapper" style="transition-property: none;">
+                <ul class="nav-menu">
+
+                    <li><a href="{% url 'home' %}">{% translate "Home" %}</a></li>
+
+                    <li><a href="#">{% translate "Objects" %}<span class="submenu-indicator"></span></a>
+                        <ul class="nav-dropdown nav-submenu">
+                            <li><a href="/object/rent/">{% translate "Rent" %}</a></li>
+                            <li><a href="/object/sale/">{% translate "Sell" %}</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="{% url 'blog' %}">{% translate "Blog" %}</a></li>
+                    <li><a href="{% url 'about' %}">{% translate "About" %}</a></li>
+                    <li><a href="{% url 'contacts' %}">{% translate "Contacts" %}</a></li>
+
+                </ul>
+                <ul class="footer-bottom-social">
+                </ul>
+                <div>
+                    <ul class="nav-menu nav-menu-social align-to-right dhsbrd">
+                        <li class="insta--wrapper"><a href="https://www.instagram.com/h2srealestate/"><i class="ti-instagram"></i></a></li>
+
+                        {% for language in languages %}
+                        <li>
+                            <form name="set_lang" action="{% url 'set_language' %}"
+                                  method="post">{% csrf_token %}
+                                <input name="next" type="hidden" value="">
+
+                                <input value={{ language.code }}
+                                               name="language"
+                                       type="hidden">
+                                <input value={{ language.code }}
+                                               name="language"
+                                       type="image"
+                                       src="/static/assets/img/{{ language.code }}.png"
+                                       onclick="document.forms['set_lang'].submit();">
+
+
+                            </form>
+                        </li>
+                        {% endfor %}
+
+                        {% if user.is_authenticated %}
+
+                            <li class="blue-btn--wrapper">
+                                <div class="btn-group account-drop">
+                                    <button type="button" class="btn btn-order-by-filt" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                        {% if user.avatar %}
+                                            <img src="{{ user.avatar.url }}" class="avater-img" alt="">
+                                        {% else %}
+                                            <img src="https://via.placeholder.com/500x500" class="avater-img"
+                                                 alt="">
+                                        {% endif %}
+                                        {% translate "Hi" %}, {{ user.full_name }}
+                                    </button>
+                                    <div class="dropdown-menu pull-right animated flipInX">
+                                        <a href="{% url 'profile' %}"><i
+                                                class="ti-user"></i>{% translate "My Profile" %}</a>
+                                        <a href="{% url 'favorite_rent_object_list' %}"><i
+                                                class="ti-bookmark"></i>{% translate "My Favorites" %}</a>
+                                        <a href="{% url 'history' %}"><i class="ti-layers"></i>{% translate "History" %}
+                                        </a>
+                                        <a class="active" href="{% url 'password_change' %}"><i
+                                                class="ti-unlock"></i>{% translate "Change Password" %}</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+
+                                <a href="{% url 'logout' %}" class="text-blue">
+                                    <i class="fa fa-sign-out mr-1"></i>
+                                    <span class="dn-lg">
+                                    {% translate "Logout" %}
+                                    </span>
+                                </a>
+                            </li>
+                        {% else %}
+
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#login" class="text-blue">
+                                    <i class="fas fa-user-circle mr-1"></i>
+                                    <span class="dn-lg">
+                                    {% translate "Login" %}
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="add-listing dark-bg blue-btn--wrapper">
+                                <a href="#" data-toggle="modal" data-target="#signup" class="theme-cl">
+                                    <i class="fas fa-arrow-alt-circle-right mr-1"></i>
+                                    {% translate "Sign Up" %}
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+
+                </div>
+            </div>
+
+        </nav>
+    </div>
+</div>
+<!-- End Navigation -->
+<div class="clearfix"></div>

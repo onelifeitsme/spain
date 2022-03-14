@@ -1,0 +1,99 @@
+{% load static %}
+{% load i18n %}
+{% load detail_and_futures_filter %}
+
+
+{% if popular_objects %}
+    <section>
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8">
+                    <div class="sec-heading center">
+                        {% blocktranslate %}
+                            <h2>Popular Objects</h2>
+                        {% endblocktranslate %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                {% for object in popular_objects %}
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single_property_style property_style_2 modern">
+
+                            <div class="listing_thumb_wrapper">
+                                <div class="property_gallery_slide-thumb">
+                                    <a href="{% url 'object_detail' object.id %}"><img
+                                            src="{{ object.primary_image.url }}"
+                                            class="img-fluid mx-auto" alt="{{ object.name }}"></a>
+                                </div>
+                                <div class="uilist_view_thumb">
+                                    <a href="#" class="uilist-btn text-warning" data-toggle="tooltip"
+                                       data-original-title="{{ object.rent_object_view_count }} Views"><i
+                                            class="ti-eye"></i></a>
+                                    <a href="#" class="uilist-btn text-success" data-toggle="tooltip"
+                                       data-original-title="Compare Property"><i class="lni lni-shuffle"></i></a>
+                                    {% if user.is_authenticated %}
+                                        <a href="javascript:void(0);" favorite_id="{{ object.id }}"
+                                           class="uilist-btn text-danger add-favorite"
+                                           data-toggle="tooltip"
+                                           data-original-title="Save Property">
+
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="property_caption_wrappers pb-0">
+                                <div class="property_short_detail">
+                                    <div class="pr_type_status">
+                                        <h4 class="pr-property_title mb-1">
+                                            <a href="{% url 'object_detail' object.id %}">
+                                                {{ object.name }}
+                                            </a></h4>
+                                        <div class="listing-location-name">
+                                            <a href="{% url 'object_detail' object.id %}">
+                                                {{ object.street }}, {{ object.city }}, {{ object.country }}
+                                            </a></div>
+                                        <div class="property-real-price">
+                                            <span class="price_status">{% translate 'From' %}&nbsp;</span>
+                                            <a href="#" class="cl-blue">
+                                                {{ object.currency.symbol }}{{ object.price }}
+                                            </a>
+                                            <span class="price_status">/{{ object.type_rent_period }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modern_property_footer">
+                                <div class="property-lists flex-1">
+                                    <ul>
+                                        <li><span class="flatcons"><img src="/static/assets/img/color-bed.svg"
+                                                                        alt=""></span>
+                                            {{ object | get_daf_single:'Bedrooms' }}
+                                        </li>
+                                        <li><span class="flatcons"><img src="/static/assets/img/color-bathroom.svg"
+                                                                        alt=""></span>
+                                            {{ object | get_daf_single:'Bathrooms' }}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="fp_types">For {{ object.type_of_deal }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+
+        </div>
+    </section>
+    <div class="clearfix"></div>
+{% endif %}
+
+
+</script>

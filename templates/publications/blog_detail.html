@@ -1,0 +1,105 @@
+{% extends '_layout.html' %}
+{% load static %}
+{% load webp_converter %}
+
+{% block meta_keywords %}
+    {{ blog.seo_keywords }}
+{% endblock %}
+{% block meta_description %}
+    {{ blog.seo_description }}
+{% endblock %}
+{% block meta_title %}
+    {{ blog.seo_title }}
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- ============================ Page Title Start================================== -->
+    <div class="page-title" style="background:#f4f4f4 url({% static_webp 'assets/img/inner-banner.jpg' %});"
+         data-overlay="5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+
+                    <div class="breadcrumbs-wrap">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <a href="{% url 'home' %}">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <a href="{% url 'blog' %}">Blog</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Blog Detail
+                            </li>
+                        </ol>
+                        <h2 class="breadcrumb-title">{{ blog.title }}</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================ Page Title End ================================== -->
+
+    <!-- ============================ Agency List Start ================================== -->
+    <section class="gray-simple">
+        <div class="container">
+            <!-- row Start -->
+            <div class="row">
+                <!-- Blog Detail -->
+                <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+                    <div class="article_detail_wrapss single_article_wrap format-standard">
+                        <div class="article_body_wrap">
+
+                            <div class="article_featured_image">
+                                {% if blog.image_detail %}
+                                    <img class="img-fluid" src="{{ blog.image_detail.url }}" alt="">
+                                {% else %}
+                                    <img class="img-fluid" src="https://via.placeholder.com/1200x800" alt="">
+                                {% endif %}
+                            </div>
+
+                                <h2 class="post-title">{{ blog.title }}</h2>
+                                <p>{{ blog.description }}</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending Posts -->
+                <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div class="single_widgets widget_thumb_post">
+                        <h4 class="title">Trending Posts</h4>
+                        <ul>
+                            {% for blog_record in most_viewed_blogs %}
+                                <li>
+                                <span class="left">
+                                {% if blog_record.image_detail %}
+                                    <img src="{{ blog_record.image_detail.url }}" alt="{{ blog_record.title }}"
+                                         class="">
+                                {% else %}
+                                    <img src="https://via.placeholder.com/1200x800" alt="{{ blog_record.title }}"
+                                         class="">
+                                {% endif %}
+                                </span>
+                                    <span class="right">
+                                    <a class="feed-title"
+                                       href="{% url 'blog' %}{{ blog_record.id }}">{{ blog_record.title }}</a>
+                                </span>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /row -->
+
+        </div>
+
+    </section>
+
+{% endblock %}

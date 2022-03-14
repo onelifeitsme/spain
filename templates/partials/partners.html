@@ -1,0 +1,19 @@
+{% load static %}
+
+<section class="gray-simple pt-4 pb-4">
+    <div class="container">
+
+        <div class="row">
+            {% for partner in partners %}
+                <div class="col-md-3 col-sm-4 col-lg">
+                    <div class="partner-grid">
+                        <img src={{ partner.picture.url }} class="img-fluid" alt="{{ partner.name }}"/>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+</section>
+<div class="clearfix"></div>

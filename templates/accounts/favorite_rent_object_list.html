@@ -1,0 +1,83 @@
+{% extends '_layout.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+
+    <section class="gray p-0">
+        <div class="container-fluid p-0">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="property_dashboard_navbar">
+
+                        <div class="dash_user_menues">
+                            <ul>
+                                <li><a href="{% url 'profile' %}"><i class="ti-user"></i>{% translate "My Profile" %}</a>
+                                </li>
+                                <li class="active"><a href="{% url 'favorite_rent_object_list' %}"><i
+                                        class="ti-bookmark"></i>{% translate "My Favorites" %}</a></li>
+                                <li><a href="{% url 'history' %}"><i class="ti-layers"></i>{% translate "History" %}</a></li>
+                                <li><a href="{% url 'password_change' %}"><i class="ti-unlock"></i>{% translate "Change Password" %}</a>
+                                </li>
+                                <li><a href="{% url 'logout' %}"><i class="ti-power-off"></i>{% translate "Log Out" %}</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-8 col-sm-12">
+                    <div class="dashboard-body">
+
+                        <div class="dashboard-wraper">
+
+                            <!-- Bookmark Property -->
+                            <div class="frm_submit_block">
+                                <h4>{% translate "My Favorites" %}</h4>
+                            </div>
+
+                            <table class="property-table-wrap responsive-table bkmark">
+
+                                <tbody>
+                                {% for object in favorite_rent_objects %}
+                                    <tr>
+                                        <td class="dashboard_propert_wrapper">
+                                            <a href="{% url 'object_detail' object.id %}">
+                                                <img src="{{ object.primary_image.url }}" alt="property_photo">
+                                            </a>
+
+                                            <div class="title">
+                                                <h4><a href="{% url 'object_detail' object.id %}">{{ object.name }}</a></h4>
+                                                <span>{{ object.address }}</span>
+                                                <span class="table-property-price">{{ object.currency }} {{ object.price }} / {{ object.type_rent_period }}</span>
+                                            </div>
+                                        </td>
+                                        <td class="action">
+                                            <a href="{% url 'favorite_remove' object.id %}" class="delete"><i class="ti-close"></i>Delete</a>
+                                        </td>
+
+                                    </tr>
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <!-- row -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+
+
+

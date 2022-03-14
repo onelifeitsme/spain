@@ -1,0 +1,11 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% load detail_and_futures_filter %}
+{% load i18n %}
+
+<div class="agent-_blocks_wrap b-0">
+    <div class="side-booking-header">
+        <h3 class="price"><sub>{% translate 'From' %}</sub> {{ object.currency.symbol }} <span class="price_per">{{ object.price }}</span><sub>/{{ object.type_rent_period }}</sub></h3>
+    </div>
+    {% crispy form_reserv form_reserv.helper %}
+</div>

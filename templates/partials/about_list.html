@@ -1,0 +1,56 @@
+{% load static %}
+{% load i18n %}
+
+{% if item.title_1 or item.title_2 or item.title_3 or item.title_4 %}
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="choose_cat_clicks">
+
+            <!-- Choose Cat Single -->
+            {% if item.title_1 or item.subtitle_1 %}
+                <div class="choose_cat_singles">
+                    <div class="choose_cat_singles_icon"><i class={{ item.icon_1 }}></i></div>
+                    <div class="choose_cat_singles_caption">
+                        <h4>{{ item.title_1 }}</h4>
+                        <p>{{ item.subtitle_1 }}</p>
+                    </div>
+                </div>
+            {% endif %}
+
+            <!-- Choose Cat Single -->
+            {% if item.title_2 or item.subtitle_2 %}
+                <div class="choose_cat_singles">
+                    <div class="choose_cat_singles_icon"><i class={{ item.icon_2 }}></i></div>
+                    <div class="choose_cat_singles_caption">
+                        <h4>{{ item.title_2 }}</h4>
+                        <p>{{ item.subtitle_2 }}</p>
+                    </div>
+                </div>
+            {% endif %}
+
+            <!-- Choose Cat Single -->
+            {% if item.title_3 or item.subtitle_3 %}
+                <div class="choose_cat_singles">
+                    <div class="choose_cat_singles_icon"><i class={{ item.icon_3 }}></i></div>
+                    <div class="choose_cat_singles_caption">
+                        <h4>{{ item.title_3 }}</h4>
+                        <p>{{ item.subtitle_3 }}</p>
+                    </div>
+                </div>
+            {% endif %}
+
+
+            <!-- Choose Cat Single -->
+            {% if item.title_4 or item.subtitle_4 %}
+                <div class="choose_cat_singles">
+                    <div class="choose_cat_singles_icon"><i class="{{ item.icon_4 }}"></i></div>
+                    <div class="choose_cat_singles_caption">
+                        <h4>{{ item.title_4 }}</h4>
+                        <p>{{ item.subtitle_4 }}</p>
+                    </div>
+                </div>
+            {% endif %}
+
+
+        </div>
+    </div>
+{% endif %}

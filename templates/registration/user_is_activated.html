@@ -1,0 +1,31 @@
+{% extends '_layout.html' %}
+{% load static %}
+
+{% block title %}User is already activated{% endblock %}
+{% block content %}
+
+    <section class="gray p-0">
+        <div class="container-fluid p-0">
+
+            <div class="row d-flex justify-content-center">
+
+                <div class="col-lg-9 col-md-8">
+                    <div class="dashboard-body">
+
+                        <div class="dashboard-wraper ">
+
+                            <h2>Activation</h2>
+                            <p class="my-5 py-5 px-5 alert-warning">The user was activated earlier.</p>
+                            <p>
+                                <a href="{% url 'login' %}">Login</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
