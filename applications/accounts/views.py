@@ -7,7 +7,7 @@ from django.contrib.auth.views import LoginView, PasswordChangeView, PasswordRes
 from django.contrib.messages.views import SuccessMessageMixin
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.signing import BadSignature
-from django.http import JsonResponse, HttpResponseRedirect
+from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
@@ -64,34 +64,18 @@ class CustomPasswordResetConfirmView(PasswordResetConfirmView):
         return context
 
 class RegisterUserView(CreateView):
-    model = User
     template_name = 'registration/register.html'
     form_class = SignUpForm
-    success_url = reverse_lazy('/account/login')
-
-    def get(self, request, *args, **kwargs):
-        self.object = None
-        return super().get(request, *args, **kwargs)
-
+    success_url = reverse_lazy('login')
+    #
     def post(self, request, *args, **kwargs):
-        self.object = None
-        form = SignUpForm(request.POST)
-
+        form = self.form_class(self.request.POST)
         if form.is_valid():
-            new_user = form.save()
-            messages.success(request,
-                             _(f'User create successfully.\n A link to complete registration has been sent to {new_user.email}.'))
-            form = SignUpForm()
+            print(form.cleaned_data)
+        else:
+            print(form.cleaned_data)
+        return super().post(self, request, *args, **kwargs)
 
-        return render(request, self.template_name, context={'form': form})
-
-    def get_context_data(self, **kwargs):
-        context = super(RegisterUserView, self).get_context_data(**kwargs)
-
-        signup_form = SignUpForm()
-        context['signup_form'] = signup_form
-
-        return context
 
 
 class UserProfileView(generic.TemplateView):

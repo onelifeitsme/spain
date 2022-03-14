@@ -63,7 +63,9 @@ form_reserv.on('submit', function (e) {
 						};
         },
         error: function (data) {
-            alert('Ошибка3434234')
+            if (data.user==undefined) {
+                alert("Для бронирования жилья необходимо зарегистрироваться на сайте")
+            }
         },
     })
 });

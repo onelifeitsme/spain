@@ -131,35 +131,8 @@ class SignUpForm(forms.ModelForm):
                                 # help_text='Введите пароль повторно'
                                 )
 
-    def clean_password1(self):
-        password1 = self.cleaned_data['password1']
 
-        if password1:
-            password_validation.validate_password(password1)
-        return password1
 
-    def clean(self):
-        super().clean()
-
-        password1 = self.cleaned_data['password1']
-        password2 = self.cleaned_data['password2']
-        if password1 and password2 and password1 != password2:
-            errors = {'password2': ValidationError(
-                'Введенные пароли не совпадают', code='password_mismatch')}
-            raise ValidationError(errors)
-
-    def save(self, commit=True):
-        user = super().save(commit=False)
-
-        user.full_name = self.cleaned_data['full_name']
-        user.email = self.cleaned_data['email']
-        user.set_password(self.cleaned_data['password1'])
-        user.is_active = False
-        user.is_activated = False
-        if commit:
-            user.save()
-        user_registered.send(SignUpForm, instance=user)
-        return user
 
     @property
     def registred_user(self):
@@ -175,7 +148,6 @@ class SignUpForm(forms.ModelForm):
         self.helper.form_id = 'signup_form'
         self.helper.form_class = 'login-form'
         self.helper.form_method = 'post'
-        self.helper.form_action = 'accounts/register/'
         self.helper.form_show_labels = False
         self.helper.form_show_errors = True
         # self.helper.help_text_inline = True
