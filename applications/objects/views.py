@@ -1,8 +1,9 @@
 import pandas
 from django.db.models import Q
 from django.http import HttpResponseRedirect, JsonResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, ListView, CreateView, TemplateView
 from haystack.generic_views import SearchView
 from . import forms
@@ -114,6 +115,7 @@ class FilterByNameObjectListView(SearchView):
 class RentObjectDetailView(DetailView):
     model = models.RentObject
     template_name = 'objects/detail/detail.html'
+
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(RentObjectDetailView, self).get_context_data(**kwargs)
@@ -231,7 +233,8 @@ class ReviewRender(TemplateView):
 
 class AddReserv(CreateView):
     form_class = forms.ReservForm
-    model = models.RentObjectReserv
+
+
 
     def dispatch(self, request, *args, **kwargs):
         self.parent_object = get_object_or_404(models.RentObject, pk=self.kwargs.get('pk'))

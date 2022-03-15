@@ -35,7 +35,6 @@ class CustomPasswordChangeView(PasswordChangeView):
         user = self.request.user
         password_change_form = CustomPasswordChangeForm(user)
         context['password_change_form'] = password_change_form
-
         return context
 
 
